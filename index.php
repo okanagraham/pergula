@@ -53,13 +53,16 @@
             <div class="col-lg-6 col-md-6 bg-white">
               <div class="p-3">
                 <p class="text-center">Enter your email address and password to access admin panel.</p>
-                <form class="mt-4">
+                <div class="">
+
+                </div>
+                <div class="mt-4">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label class="text-dark" for="uname">Email</label>
                                 <input class="form-control" id="uname" type="email"
-                                    placeholder="enter your email address">
+                                    placeholder="enter your email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                             </div>
                         </div>
                         <div class="col-lg-12">
@@ -70,20 +73,40 @@
                             </div>
                         </div>
                         <div class="col-lg-12 text-center">
-                            <button type="submit" class="btn btn-block btn-dark">Sign In</button>
+                            <button type="button" onclick="signIn()" class="btn btn-block btn-dark">Sign In</button>
                         </div>
                         <div class="col-lg-12 text-center mt-5">
                             Forgot your password? <a href="#" class="text-info">Reset</a>
                         </div>
                     </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
+
+    <!-- Alert Modal -->
+    <div id="response-header-modal" class="modal fade" tabindex="-1" role="dialog"
+        aria-labelledby="response-header-modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header modal-colored-header bg-warning">
+                    <h4 class="modal-title" id="dark-header-modalLabel">Oh no!</h4>
+                    <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                  <p id="response-message"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light"
+                        data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->
