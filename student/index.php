@@ -54,7 +54,7 @@
                     <!-- ============================================================== -->
                     <div class="navbar-brand">
                         <!-- Logo icon -->
-                        <a href="docs.html">
+                        <a href="index.html">
                             <b class="logo-icon">
                                 <!-- Dark Logo icon -->
                                 <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
@@ -90,14 +90,167 @@
                     <!-- toggle and nav items -->
                     <!-- ============================================================== -->
                     <ul class="navbar-nav float-left mr-auto ml-3 pl-1">
+                        <!-- Notification -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle pl-md-3 position-relative" href="javascript:void(0)"
+                                id="bell" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span><i data-feather="bell" class="svg-icon"></i></span>
+                                <span class="badge badge-primary notify-no rounded-circle" id="unread-notices"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-left mailbox animated bounceInDown">
+                                <ul class="list-style-none">
+                                    <li>
+                                        <div class="message-center notifications position-relative">
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)"
+                                                class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                                                <div class="btn btn-danger rounded-circle btn-circle"><i
+                                                        data-feather="airplay" class="text-white"></i></div>
+                                                <div class="w-75 d-inline-block v-middle pl-2">
+                                                    <h6 class="message-title mb-0 mt-1">Luanch Admin</h6>
+                                                    <span class="font-12 text-nowrap d-block text-muted">Just see
+                                                        the my new
+                                                        admin!</span>
+                                                    <span class="font-12 text-nowrap d-block text-muted">9:30 AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)"
+                                                class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                                                <span class="btn btn-success text-white rounded-circle btn-circle"><i
+                                                        data-feather="calendar" class="text-white"></i></span>
+                                                <div class="w-75 d-inline-block v-middle pl-2">
+                                                    <h6 class="message-title mb-0 mt-1">Event today</h6>
+                                                    <span
+                                                        class="font-12 text-nowrap d-block text-muted text-truncate">Just
+                                                        a reminder that you have event</span>
+                                                    <span class="font-12 text-nowrap d-block text-muted">9:10 AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)"
+                                                class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                                                <span class="btn btn-info rounded-circle btn-circle"><i
+                                                        data-feather="settings" class="text-white"></i></span>
+                                                <div class="w-75 d-inline-block v-middle pl-2">
+                                                    <h6 class="message-title mb-0 mt-1">Settings</h6>
+                                                    <span
+                                                        class="font-12 text-nowrap d-block text-muted text-truncate">You
+                                                        can customize this template
+                                                        as you want</span>
+                                                    <span class="font-12 text-nowrap d-block text-muted">9:08 AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)"
+                                                class="message-item d-flex align-items-center border-bottom px-3 py-2">
+                                                <span class="btn btn-primary rounded-circle btn-circle"><i
+                                                        data-feather="box" class="text-white"></i></span>
+                                                <div class="w-75 d-inline-block v-middle pl-2">
+                                                    <h6 class="message-title mb-0 mt-1">Pavan kumar</h6> <span
+                                                        class="font-12 text-nowrap d-block text-muted">Just
+                                                        see the my admin!</span>
+                                                    <span class="font-12 text-nowrap d-block text-muted">9:02 AM</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link pt-3 text-center text-dark" href="javascript:void(0);">
+                                            <strong>Check all notifications</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- End Notification -->
                         <!-- ============================================================== -->
                         <!-- create new -->
                         <!-- ============================================================== -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="docs.html" role="button">
-                                Student Portal
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i data-feather="settings" class="svg-icon"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <div class="customize-input">
+                                    <select
+                                        class="custom-select form-control bg-white custom-radius custom-shadow border-0">
+                                        <option selected>EN</option>
+                                        <option value="1">AB</option>
+                                        <option value="2">AK</option>
+                                        <option value="3">BE</option>
+                                    </select>
+                                </div>
                             </a>
                         </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-right">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <form>
+                                    <div class="customize-input">
+                                        <input class="form-control custom-shadow custom-radius border-0 bg-white"
+                                            type="search" placeholder="Search" aria-label="Search">
+                                        <i class="form-control-icon" data-feather="search"></i>
+                                    </div>
+                                </form>
+                            </a>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="../assets/images/users/profile-pic.jpg" alt="user" class="rounded-circle"
+                                    width="40">
+                                <span class="ml-2 d-none d-lg-inline-block"><span>Hello,</span> <span
+                                        class="text-dark" id="student-name"></span> <i data-feather="chevron-down"
+                                        class="svg-icon"></i></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="user"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    My Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="credit-card"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    My Balance</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="mail"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Inbox</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="settings"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Account Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i data-feather="power"
+                                        class="svg-icon mr-2 ml-1"></i>
+                                    Logout</a>
+                                <div class="dropdown-divider"></div>
+                                <div class="pl-4 p-3"><a href="javascript:void(0)" class="btn btn-sm btn-info">View
+                                        Profile</a></div>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
                     </ul>
                 </div>
             </nav>
@@ -115,59 +268,28 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="nav-small-cap"><span class="hide-menu">Main</span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs.html"
-                        aria-expanded="false"><i data-feather="bar-chart-2" class="feather-icon"></i>
-							                 <span class="hide-menu">Dashboard</span></a>
-						            </li>
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
+                                aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
+                                    class="hide-menu">Dashboard</span></a></li>
             						<li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs-start.html"
-                                    aria-expanded="false"><i data-feather="clipboard" class="feather-icon"></i>
+                                    aria-expanded="false"><i data-feather="book" class="feather-icon"></i>
             							<span class="hide-menu">Courses</span></a>
             						</li>
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs-start.html"
-                                    aria-expanded="false"><i data-feather="clipboard" class="feather-icon"></i>
+                                    aria-expanded="false"><i data-feather="mail" class="feather-icon"></i>
                           <span class="hide-menu">Inbox</span></a>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs-start.html"
-                                    aria-expanded="false"><i data-feather="clipboard" class="feather-icon"></i>
+                                    aria-expanded="false"><i data-feather="award" class="feather-icon"></i>
                           <span class="hide-menu">Grades</span></a>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs-start.html"
-                                    aria-expanded="false"><i data-feather="clipboard" class="feather-icon"></i>
+                                    aria-expanded="false"><i data-feather="folder" class="feather-icon"></i>
                           <span class="hide-menu">Assessments</span></a>
                         </li>
-                        <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">UI Components</span></li>
-						            <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
-                                    class="hide-menu">Bootstrap
-                                </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="docs-ui-buttons.html" class="sidebar-link"><span class="hide-menu"> Buttons </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-modals.html" class="sidebar-link"><span class="hide-menu"> Modals </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-tabs.html" class="sidebar-link"><span class="hide-menu"> Tabs </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-tooltip-popover.html" class="sidebar-link"><span class="hide-menu"> Tooltip & Popover </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-notification.html" class="sidebar-link"><span class="hide-menu"> Notification </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-progressbar.html" class="sidebar-link"><span class="hide-menu"> Progressbar </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-typography.html" class="sidebar-link"><span class="hide-menu"> Typography </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-bootstrapui.html" class="sidebar-link"><span class="hide-menu"> Bootstrap UI </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-breadcrumb.html" class="sidebar-link"><span class="hide-menu"> Breadcrumb </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-listmedia.html" class="sidebar-link"><span class="hide-menu"> List Media </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-grid.html" class="sidebar-link"><span class="hide-menu"> Grid </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-carousel.html" class="sidebar-link"><span class="hide-menu"> Carousel </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-scrollspy.html" class="sidebar-link"><span class="hide-menu"> Scrollspy </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-toasts.html" class="sidebar-link"><span class="hide-menu"> Toasts </span></a></li>
-                								<li class="sidebar-item"><a href="docs-ui-spinner.html" class="sidebar-link"><span class="hide-menu"> Spinner </span></a></li>
-                            </ul>
-                        </li>
-						<li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="edit" class="feather-icon"></i><span
-                                    class="hide-menu">Customized
-                                </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
-								<li class="sidebar-item"><a href="docs-custom-datatables.html" class="sidebar-link"><span class="hide-menu"> Datatables </span></a></li>
-								<li class="sidebar-item"><a href="docs-custom-widgets.html" class="sidebar-link"><span class="hide-menu"> Widgets </span></a></li>
-								<li class="sidebar-item"><a href="docs-custom-chart-chartjs.html" class="sidebar-link"><span class="hide-menu"> ChartJs </span></a></li>
-                            </ul>
+                        <li class="sidebar-item" id="gamification-item"> <a class="sidebar-link sidebar-link" href="docs-start.html"
+                                    aria-expanded="false"><i data-feather="tag" class="feather-icon"></i>
+                          <span class="hide-menu">Leaderboards</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -186,15 +308,17 @@
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
             <div class="page-breadcrumb">
-                <div class="d-flex align-items-center">
-                    <h4 class="page-title text-truncate text-dark font-weight-medium mb-0">Dashboard</h4>
-                    <div class="ml-auto">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb m-0 p-0">
-                                <li class="breadcrumb-item text-muted active" aria-current="page">AdminMart</li>
-                                <li class="breadcrumb-item text-muted" aria-current="page">Getting Started</li>
-                            </ol>
-                        </nav>
+                <div class="row">
+                    <div class="col-7 align-self-center">
+                        <h3 class="page-title text-truncate text-dark font-weight-medium mb-1" id="greeting"></h3>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb m-0 p-0">
+                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -206,6 +330,75 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
             <!-- ============================================================== -->
+            <!-- *************************************************************** -->
+            <!-- Start First Cards -->
+            <!-- *************************************************************** -->
+            <div class="card-group">
+                <div class="card border-right">
+                    <div class="card-body">
+                        <div class="d-flex d-lg-flex d-md-block align-items-center">
+                            <div>
+                                <div class="d-inline-flex align-items-center">
+                                    <h2 class="text-dark mb-1 font-weight-medium" id="course-count"></h2>
+                                </div>
+                                <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Assigned Courses</h6>
+                            </div>
+                            <div class="ml-auto mt-md-3 mt-lg-0">
+                                <span class="opacity-7 text-muted"><i data-feather="user-plus"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-right">
+                    <div class="card-body">
+                        <div class="d-flex d-lg-flex d-md-block align-items-center">
+                            <div>
+                                <h2 class="text-dark mb-1 w-100 text-truncate font-weight-medium" id="assessment-count"></h2>
+                                <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Assessments
+                                </h6>
+                            </div>
+                            <div class="ml-auto mt-md-3 mt-lg-0">
+                                <span class="opacity-7 text-muted"><i data-feather="dollar-sign"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-right">
+                    <div class="card-body">
+                        <div class="d-flex d-lg-flex d-md-block align-items-center">
+                            <div>
+                                <div class="d-inline-flex align-items-center">
+                                    <h2 class="text-dark mb-1 font-weight-medium" id="unread-messages"></h2>
+                                    <span class="badge bg-danger font-12 text-white font-weight-medium badge-pill ml-2 d-md-none d-lg-block">New</span>
+                                </div>
+                                <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Unread Messages</h6>
+                            </div>
+                            <div class="ml-auto mt-md-3 mt-lg-0">
+                                <span class="opacity-7 text-muted"><i data-feather="file-plus"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex d-lg-flex d-md-block align-items-center">
+                            <div>
+                              <div class="d-inline-flex align-items-center">
+                                <h2 class="text-dark mb-1 font-weight-medium" id="tasks-count"></h2>
+                                <span class="badge bg-warning font-12 text-white font-weight-medium badge-pill ml-2 d-md-none d-lg-block">Pending</span>
+                              </div>
+                              <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Tasks</h6>
+                            </div>
+                            <div class="ml-auto mt-md-3 mt-lg-0">
+                                <span class="opacity-7 text-muted"><i data-feather="globe"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- *************************************************************** -->
+            <!-- End First Cards -->
+            <!-- *************************************************************** -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
@@ -243,22 +436,104 @@
     <!-- End JS -->
     <?php include('../dist/js/common_footer.php'); ?>
     <script>
-      //feature access based on firebase remote config,
-      //if overall features get turned on/off, this will take effect after next login
-      let sessionStorage = window.sessionStorage;
 
-      const basic_features = sessionStorage.getItem("basic_features");
-      const gamification = sessionStorage.getItem("gamification");
-      const virtual_classrooms = sessionStorage.getItem("virtual_classrooms");
+      var db = firebase.firestore();
 
-      //update the ui based on the value
+      //get the current user, display name etc
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          // User is signed in.
+          if(user.emailVerified){
+            console.log("emailVerified");
+          }else{
+            /*user.sendEmailVerification().then(function() {
+              // Email sent.
+            }).catch(function(error) {
+              // An error happened.
+            });*/
+          }
+          document.getElementById("student-name").textContent = user.displayName;
+          document.getElementById("greeting").innerHTML = 'Hello ' + user.displayName + '!';
+          getCourses(user);
+          getUnreadMessages(user);
+          getAssessments(user);
+          getTasks(user);
+          //feature access based on firebase remote config,
+          //if overall features get turned on/off, this will take effect after next login
+          let sessionStorage = window.sessionStorage;
 
-      updateUi("basic_features", basic_features);
-      updateUi("gamification", gamification);
-      updateUi("virtual_classrooms", virtual_classrooms);
+          const basic_features = sessionStorage.getItem("basic_features");
+          const gamification = sessionStorage.getItem("gamification");
+          const virtual_classrooms = sessionStorage.getItem("virtual_classrooms");
+
+          //update the ui based on the value
+
+          updateUi("basic_features", basic_features);
+          updateUi("gamification", gamification);
+          updateUi("virtual_classrooms", virtual_classrooms);
+
+
+        } else {
+          // No user is signed in.
+          window.location.replace("../index.php");
+        }
+      });
 
       function updateUi(element, state){
         //update ui based on variables
+        
+      }
+
+      function getNotices(user){
+        //get notices and display on span called "unread-notices" - call textContent on element
+      }
+
+      function getCourses(user){
+        var subjectsRef = db.collection("students_subjects").doc(user.uid).collection("subjects");
+        subjectsRef
+        .get()
+        .then(function(querySnapshot){
+          document.getElementById("course-count").innerHTML = querySnapshot.size;
+        })
+        .catch(function(error){
+          console.log(error);
+        });
+      }
+
+      function getUnreadMessages(user){
+        var unreadRef = db.collection("inbox").doc(user.uid).collection("messages");
+        unreadRef.where("read", "==", false)
+        .get()
+        .then(function(querySnapshot){
+          document.getElementById("unread-messages").innerHTML = querySnapshot.size;
+        })
+        .catch(function(error){
+          console.log(error);
+        });
+      }
+
+      function getAssessments(user){
+        var assessmentRef = db.collection("students_assessments");
+        assessmentRef.where("assigned_to." + user.uid, "==", true)
+        .get()
+        .then(function(querySnapshot){
+          document.getElementById("assessment-count").innerHTML = querySnapshot.size;
+        })
+        .catch(function(error){
+          console.log(error);
+        });
+      }
+
+      function getTasks(user){
+        var tasksRef = db.collection("tasks");
+        tasksRef.where("completed", "==", false).where("uid", "==", user.uid)
+        .get()
+        .then(function(querySnapshot){
+          document.getElementById("tasks-count").innerHTML = querySnapshot.size;
+        })
+        .catch(function(error){
+          console.log(error);
+        });
       }
     </script>
 </body>
