@@ -452,6 +452,7 @@
               // An error happened.
             });*/
           }
+          //document.getElementById("gamification-item").style.display = "none";
           document.getElementById("student-name").textContent = user.displayName;
           document.getElementById("greeting").innerHTML = 'Hello ' + user.displayName + '!';
           getCourses(user);
@@ -481,7 +482,37 @@
 
       function updateUi(element, state){
         //update ui based on variables
-        
+        if(element == "basic_features"){
+          if(state == "on"){
+            setBasicFeatures(true);
+          }else{
+            setBasicFeatures(false);
+          }
+        }
+
+        if(element == "virtual_classrooms"){
+          if(state == "on"){
+            setVirtualClassroomFeatures(true);
+          }else{
+            setVirtualClassroomFeatures(false);
+          }
+        }
+      }
+
+      function setVirtualClassroomFeatures(boolean){
+        if(boolean){
+          //set here
+        }else{
+          //turn off here
+        }
+      }
+
+      function setBasicFeatures(boolean){
+        if(boolean){
+          //turn on here
+        }else{
+          //turn off here
+        }
       }
 
       function getNotices(user){
