@@ -1,0 +1,11 @@
+.present-allday {
+  color: Green;
+}
+
+.present-halfday {
+  color: Orange;
+}
+
+.absent {
+  color: Red;
+}
