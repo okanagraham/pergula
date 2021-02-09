@@ -268,13 +268,13 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="nav-small-cap"><span class="hide-menu">Main</span></li>
-                        <li class="sidebar-item selected"> <a class="sidebar-link sidebar-link" href="index.html"
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.php"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
-            						<li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="courses.php"
-                                    aria-expanded="false"><i data-feather="book" class="feather-icon"></i>
-            							<span class="hide-menu">Courses</span></a>
-            						</li>
+                        <li class="sidebar-item selected"> <a class="sidebar-link sidebar-link" href="#"
+                        aria-expanded="false"><i data-feather="book" class="feather-icon"></i>
+                            <span class="hide-menu">Courses</span></a>
+                        </li>
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs-start.html"
                                     aria-expanded="false"><i data-feather="mail" class="feather-icon"></i>
                           <span class="hide-menu">Inbox</span></a>
@@ -314,7 +314,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="#">Dashboard</a>
+                                    <li class="breadcrumb-item"><a href="#">Courses</a>
                                     </li>
                                 </ol>
                             </nav>
@@ -331,94 +331,13 @@
             <div class="container-fluid">
             <!-- ============================================================== -->
             <!-- *************************************************************** -->
-            <!-- Start First Cards -->
+            <!-- Cards for Subjects -->
             <!-- *************************************************************** -->
-            <div class="card-group">
-                <div class="card border-right">
-                    <div class="card-body">
-                        <div class="d-flex d-lg-flex d-md-block align-items-center">
-                            <div>
-                                <div class="d-inline-flex align-items-center">
-                                    <h2 class="text-dark mb-1 font-weight-medium" id="course-count"></h2>
-                                </div>
-                                <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Assigned Courses</h6>
-                            </div>
-                            <div class="ml-auto mt-md-3 mt-lg-0">
-                                <span class="opacity-7 text-muted"><i data-feather="user-plus"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card border-right">
-                    <div class="card-body">
-                        <div class="d-flex d-lg-flex d-md-block align-items-center">
-                            <div>
-                                <h2 class="text-dark mb-1 w-100 text-truncate font-weight-medium" id="assessment-count"></h2>
-                                <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Assessments
-                                </h6>
-                            </div>
-                            <div class="ml-auto mt-md-3 mt-lg-0">
-                                <span class="opacity-7 text-muted"><i data-feather="dollar-sign"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card border-right">
-                    <div class="card-body">
-                        <div class="d-flex d-lg-flex d-md-block align-items-center">
-                            <div>
-                                <div class="d-inline-flex align-items-center">
-                                    <h2 class="text-dark mb-1 font-weight-medium" id="unread-messages"></h2>
-                                    <span class="badge bg-danger font-12 text-white font-weight-medium badge-pill ml-2 d-md-none d-lg-block">New</span>
-                                </div>
-                                <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Unread Messages</h6>
-                            </div>
-                            <div class="ml-auto mt-md-3 mt-lg-0">
-                                <span class="opacity-7 text-muted"><i data-feather="file-plus"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex d-lg-flex d-md-block align-items-center">
-                            <div>
-                              <div class="d-inline-flex align-items-center">
-                                <h2 class="text-dark mb-1 font-weight-medium" id="tasks-count"></h2>
-                                <span class="badge bg-warning font-12 text-white font-weight-medium badge-pill ml-2 d-md-none d-lg-block">Pending</span>
-                              </div>
-                              <h6 class="text-muted font-weight-normal mb-0 w-100 text-truncate">Tasks</h6>
-                            </div>
-                            <div class="ml-auto mt-md-3 mt-lg-0">
-                                <span class="opacity-7 text-muted"><i data-feather="globe"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-body">
-                        <div class="card-title">Today's Schedule</div>
-                            <div class="table-responsive">
-                                <table class="table table-sm table-striped table-bordered no-wrap">
-                                    <thead>
-                                        <tr>
-                                            <th>Time</th>
-                                            <th>Status</th>
-                                            <th>Subject</th>                                            
-                                        </tr>
-                                    </thead>
-                                    <tbody id="table_tbody"></tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row" id="subject_row">
+
             </div>
             <!-- *************************************************************** -->
-            <!-- End First Cards -->
+            <!-- End of Subjects -->
             <!-- *************************************************************** -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
@@ -476,11 +395,11 @@
           //document.getElementById("gamification-item").style.display = "none";
           document.getElementById("student-name").textContent = user.displayName;
           document.getElementById("greeting").innerHTML = 'Hello ' + user.displayName + '!';
-          getCourses(user);
-          getUnreadMessages(user);
-          getAssessments(user);
-          getTasks(user);
-          getTodaysTimeTable(user);
+          getMySubjects(user);
+          //getCourses(user);
+          //getUnreadMessages(user);
+          //getAssessments(user);
+          //getTasks(user);
           //feature access based on firebase remote config,
           //if overall features get turned on/off, this will take effect after next login
           let sessionStorage = window.sessionStorage;
@@ -598,76 +517,37 @@
         });
       }
 
-      function getTodaysTimeTable(user){
-          let tbody = document.getElementById("table_tbody");
-          let day_of_week = getDayOfWeek();
-          let subjects = [];
-          let promises = [];
-          var studentRef = db.collection("students").doc(user.uid).collection("subjects")
-          .get()
-          .then(function(querySnapshot){
-            querySnapshot.forEach((doc) => {
-                promises.push(
-                    db.collection("subject_schedule").doc(doc.id)
-                    .get().then((days) => {
-                        if(days.get(day_of_week) != null){
-                            //console.log(days.get(day_of_week).end);
-                            let tr = `
-                                <tr>
-                                    <td>${days.get(day_of_week).start} - ${days.get(day_of_week).end}</td>
-                                    <td>${(days.get(day_of_week).on_hold) ? "On Hold" : "Scheduled"}</td>
-                                    <td>${days.get("name")}</td>
-                                </tr>
-                            `;
-                            tbody.innerHTML += tr;
-                            /*const subject_for_today = new SubjectSchedule(days.get("name"), 
-                            days.get(day_of_week).get("start"), 
-                            days.get(day_of_week).get("end"), 
-                            days.get(day_of_week).get("on_hold"));
-
-                            subjects.push(subject_for_today);*/
-                        }
-                    }).catch((error) => {
-                        console.log(error)
-                    })
-                );
+      function getMySubjects(user) {
+          let subject_row = document.getElementById("subject_row");
+          var subjectRef = db.collection("students_subjects").doc(user.uid).collection("subjects")
+            .get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc)=> {
+                    var subjectQuery = db.collection("subjects").doc(doc.id)
+                    .get().then((subject) => {
+                        const subject_card = `
+                        <div class="col-md-3">
+                            <div class="card border-dark">
+                                <div class="card-header bg-dark">
+                                    <h4 class="mb-0 text-white">${subject.data().name}</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">${subject.data().description}</p>
+                                    <a href="subject_details.php?subject_uid=${subject.id}" class="btn btn-primary stretched-link">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                        subject_row.innerHTML += subject_card;
+                    }).catch((error) =>{
+                        consle.log(error);
+                    });
+                });
             })
-            Promise.all(promises).then(console.log(subjects));
-          }).catch(function(error){
+            .catch(function(error){
             console.log(error);
-        });
-      }
-
-      class SubjectSchedule {
-          constructor(name, start, end, on_hold) {
-              this.name = name;
-              this.start = start;
-              this.end = end;
-              this.on_hold = on_hold;
-          }
-
-          get time(){
-              return `${this.start} - ${this.end}`;
-          }
-
-          get start() {
-              return this.start;
-          }
-
-          get end(){
-              return this.end;
-          }
-
-          get on_hold() {
-              return this.on_hold;
-          }
-      }
-
-      function getDayOfWeek(){
-          var today = new Date();
-          return today.getDay().toString();
-      }
-
+            });
+        }
     </script>
 </body>
 
