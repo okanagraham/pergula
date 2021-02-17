@@ -10,7 +10,7 @@ document.addEventListener("keydown", function(event){
   }
   var key = event.key || event.keyCode;
 
-  if(key === 13){
+  if(key === 13 || key === 'Enter'){
     signIn();
   }
 });
