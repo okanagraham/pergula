@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12 text-center">
-                            <button type="button" onclick="signIn()" class="btn btn-block btn-dark">Sign In</button>
+                            <button type="button" onclick="signIn()" id="sign_in_button" class="btn btn-block btn-dark">Sign In</button>
                         </div>
                         <div class="col-lg-12 text-center mt-5">
                             Forgot your password? <a href="#" class="text-info">Reset</a>

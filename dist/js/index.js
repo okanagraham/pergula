@@ -3,6 +3,7 @@ Set the default config (basic features on, all others off),
 then after sign in, get the feature list then set the session variables
 if features are updated, users will need to log off then back on for changes to take effect
 */
+
 document.addEventListener("keydown", function(event){
   if(event.defaultPrevented){
     return;
@@ -13,6 +14,7 @@ document.addEventListener("keydown", function(event){
     signIn();
   }
 });
+
 let sessionStorage = window.sessionStorage;
 
 const remoteConfig = firebase.remoteConfig();
