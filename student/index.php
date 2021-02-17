@@ -599,44 +599,45 @@
       }
 
       function getTodaysTimeTable(user){
-          let tbody = document.getElementById("table_tbody");
-          let day_of_week = getDayOfWeek();
-          let subjects = [];
-          let promises = [];
-          var studentRef = db.collection("students").doc(user.uid).collection("subjects")
-          .get()
-          .then(function(querySnapshot){
-            querySnapshot.forEach((doc) => {
-                promises.push(
-                    db.collection("subject_schedule").doc(doc.id)
-                    .get().then((days) => {
-                        if(days.get(day_of_week) != null){
-                            //console.log(days.get(day_of_week).end);
-                            let tr = `
-                                <tr>
-                                    <td>${days.get(day_of_week).start} - ${days.get(day_of_week).end}</td>
-                                    <td>${(days.get(day_of_week).on_hold) ? "On Hold" : "Scheduled"}</td>
-                                    <td>${days.get("name")}</td>
-                                </tr>
-                            `;
-                            tbody.innerHTML += tr;
-                            /*const subject_for_today = new SubjectSchedule(days.get("name"), 
-                            days.get(day_of_week).get("start"), 
-                            days.get(day_of_week).get("end"), 
-                            days.get(day_of_week).get("on_hold"));
+            let tbody = document.getElementById("table_tbody");
+            let empty = "<tr><td colspan=3>No data</td></tr>";
+            let day_of_week = getDayOfWeek();
+            let added = 0;
+            let promises = [];
+            var studentRef = db.collection("students").doc(user.uid).collection("subjects")
+            .get()
+            .then(function(querySnapshot){
+                querySnapshot.forEach((doc) => {
+                    promises.push(
+                        db.collection("subject_schedule").doc(doc.id)
+                        .get().then((days) => {                        
+                            if(days.get(day_of_week) != null){
+                                //console.log(days.get(day_of_week).end);
+                                let tr = `
+                                    <tr>
+                                        <td>${days.get(day_of_week).start} - ${days.get(day_of_week).end}</td>
+                                        <td>${(days.get(day_of_week).on_hold) ? "On Hold" : "Scheduled"}</td>
+                                        <td>${days.get("name")}</td>
+                                    </tr>
+                                `;                            
+                                tbody.innerHTML += tr;
+                                console.log("in method");
+                                added++;
 
-                            subjects.push(subject_for_today);*/
-                        }
-                    }).catch((error) => {
-                        console.log(error)
-                    })
-                );
+                            }else{
+
+                            }
+                        }).catch((error) => {
+                            console.log(error)
+                        })
+                    );
+
+                })
             })
-            Promise.all(promises).then(console.log(subjects));
-          }).catch(function(error){
-            console.log(error);
-        });
-      }
+            .catch(function(error){
+                console.log(error);
+            });
+        }
 
       class SubjectSchedule {
           constructor(name, start, end, on_hold) {
